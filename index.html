@@ -64,16 +64,22 @@
         });
     }
 
-    window.onload = function(){
-        aId('vmenu').style.right = "-15rem";
-    }
 
-    var url = new URL(document.URL);
-    var eself = url.searchParams.get(self);
-
-    if (eself == null){
-        window.location.href = "home";
+    const req = window.location.href.split('?').pop();
+    //check if 'eswap.pro' is in req
+    if (req.includes('eswap.pro')){
+        window.location.href = 'home';
     }
+    else {
+        console.log('Action everybody, action!');
+    }
+    
+        
+
+    
+
+    
+
 
 
     
