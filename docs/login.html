@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eSwap - Home</title>
+    <meta name="description"content="eSwap - Your data, organised.">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords"content="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,u,z">
+    <link rel="icon" href="media/img/eswap_sq.png" type="image/icon type">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+	<link rel="stylesheet" href="css/root.css">
+	<link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <!--BOXICONS-->
+	<link rel="stylesheet" href="fonts/boxicons/css/animations.css">
+	<link rel="stylesheet" href="fonts/boxicons/css/boxicons.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+    <script src="js/wrapper.js"></script>
+
+    
+    <div class="login-main">
+        <div class="login">
+            <div class="login-grid">
+                <div id="log">
+                    <div class="login-box">
+                        <h1 style="margin-bottom: 1rem;">Login</h1>
+        
+                        <div class="data-flex-v" style="margin-top: 1.25rem;">
+                            <h2>Username</h2>
+                            <input type="text">
+                        </div>
+        
+                        <div class="data-flex-v" style="margin-top: 2rem;">
+                            <h2>Password</h2>
+                            <input type="text">
+                        </div>
+        
+                        <button class="data-flex" style="padding: .5rem; width: 100%;margin-top: 1rem;">
+                            <i class='bx bx-chevrons-right' style="font-size: 1.25rem;"></i>
+                            Continue</button>
+                    </div>
+        
+                    <div class="login-box" style="margin-top: 1rem;padding: 1rem 2rem;">
+                        <h2 style="margin-bottom: 1rem;">Don't have an account?</h1>
+        
+                        <button class="data-flex" style="padding: .5rem; width: 100%;margin-top: 1rem;" onclick="regNotLogin()">
+                            <i class='bx bx-chevrons-right' style="font-size: 1.25rem;"></i>
+                            Register</button>
+                    </div>
+                </div>
+    
+                <div id="reg">
+                    <div class="login-box">
+                        <h1 style="margin-bottom: 1rem;">Register</h1>
+        
+                        <div class="data-flex-v" style="margin-top: 1.25rem;">
+                            <h2>Username</h2>
+                            <input type="text">
+                        </div>
+        
+                        <div class="data-flex-v" style="margin-top: 2rem;">
+                            <h2>Password</h2>
+                            <input type="text">
+                        </div>
+        
+                        <button class="data-flex" style="padding: .5rem; width: 100%;margin-top: 1rem;">
+                            <i class='bx bx-chevrons-right' style="font-size: 1.25rem;"></i>
+                            Continue</button>
+                    </div>
+        
+                    <div class="login-box" style="margin-top: 1rem;padding: 1rem 2rem;">
+                        <h2 style="margin-bottom: 1rem;">Already have an account?</h1>
+        
+                        <button class="data-flex" style="padding: .5rem; width: 100%;margin-top: 1rem;" onclick="loginNotReg()">
+                            <i class='bx bx-chevrons-right' style="font-size: 1.25rem;"></i>
+                            Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-flex">
+            <img src="media/img/eswap.png" alt="">
+            <div class="bolt">
+                <div class="bolt-grid">
+                    <div class="data-flex-v" style="align-items: flex-start;">
+                        <h1>Your journey<br> begins here.</h1>
+                        <p>Welcome to eSwap.</p>
+                    </div>
+                    <div class="data-flex-v" style="align-items: flex-start;">
+                        <h1>Welcome back<br>to eSwap.</h1>
+                        <p>Please login</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+
+    
+
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<script>
+
+    AOS.init({
+        easing: 'ease',
+        duration: 1100,
+        once: true
+    });
+
+
+    function eId(id){
+        return document.getElementById(id);
+    }
+
+    function toggleMenu(){
+        vmenu = eId('vmenu')
+        if (vmenu.style.right != "0px"){
+            vmenu.style.right = "0px";
+        }
+        else {
+            vmenu.style.right = "-15rem";
+        }
+    }
+
+    function reach(name){
+        document.getElementById(name).scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        });
+    }
+    function goto(name){
+        document.querySelectorAll(name)[0].scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        });
+    }
+
+    function loginNotReg(){
+        document.querySelectorAll('.bolt-grid')[0].style.transform = "translateY(-13rem)"
+        document.querySelectorAll('.login-grid')[0].style.transform = "translateX(0rem)"
+    }
+
+    
+
+    function regNotLogin(){
+        document.querySelectorAll('.bolt-grid')[0].style.transform = "translateY(0rem)"
+        document.querySelectorAll('.login-grid')[0].style.transform = "translateX(-21rem)"
+    }
+
+    window.onload = function(){
+        nitChangeScreen()
+    }
+
+
+    
+</script>
+</html>

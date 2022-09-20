@@ -1,0 +1,118 @@
+body {
+    min-height: 100vh;
+    background: var(--background-colour) !important;
+}
+
+.login {
+    overflow: hidden;
+    width: 20rem;
+    background: var(--background-colour);
+}
+
+.login input {
+    border: none;
+    border-bottom: solid 1px #ffffff2a;
+    color: var(--text-colour);
+    background: transparent;
+    padding: .5rem .1rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: Inter;
+}
+
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    width: max-content;
+    gap: 5rem;
+    padding: 0 2rem;
+    transform: translateX(-21rem);
+}
+
+
+
+.login input:focus {
+    border: none;
+    border-bottom: solid 1px #ffffff2a;
+    outline: none;
+    box-shadow: none!important;
+    resize: none;
+}
+
+.login input::placeholder {
+    color: var(--text-color-desc)
+}
+
+.login-box{
+    background: rgba(255, 255, 255, 0.036);
+    border: solid 1px rgba(255, 255, 255, 0.081);
+    border-radius: .5rem;
+    padding: 2rem;
+}
+
+.login-main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+    place-items: center;
+    height: 100vh;
+}
+
+.login-grid > div {
+    width: 16rem;
+}
+
+
+.login-main img{
+    height: 50vh;
+}
+
+h1 {
+    font-weight: 700;
+    color: var(--text-colour);
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-weight: 500;
+    color: var(--text-colour-desc);
+    font-size: .75rem;
+}
+
+
+
+.login-main > .data-flex h1{
+    font-weight: 700;
+    color: var(--text-colour);
+    font-size: 7.5vh;
+}
+
+.login-main  .data-flex-v {
+    gap: .25rem;
+    align-items: flex-start;
+}
+
+.login-main > .data-flex p{
+    font-weight: 500;
+    color: var(--text-colour-desc);
+    font-size: 3.5vh;
+}
+
+.bolt {
+    height: 10rem;
+    overflow: hidden;
+}
+
+
+
+.bolt-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 3rem;
+}
+
+.bolt-grid > div{
+    height: 10rem;
+}
